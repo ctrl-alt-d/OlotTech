@@ -1,7 +1,8 @@
 ﻿@page "/"
 @using serverside.Data;
+@inject Marcador Marcador;
 
-<div class="jumbotron negre">
+<div class="jumbotron">
     <div class="d-flex">
         <div class="d-flex align-items-start flex-column">
             <button 
@@ -39,7 +40,9 @@
 </div>
 
 @code
-{
-    protected Marcador Marcador = new Marcador();
-
+{    
+    protected override void OnInitialized()
+    {
+        Marcador.PropertyChanged += (_,__) => InvokeAsync(StateHasChanged);
+    }
 }

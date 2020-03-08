@@ -6,6 +6,14 @@ body {
     border: 0;
     margin: 0;
     overflow: hidden; 
+    background-image: url("/img.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: black;
+}
+
+.jumbotron {
+    background: none
 }
 
 .marcador {    
